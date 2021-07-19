@@ -1,7 +1,7 @@
-#LeNet-5
+# LeNet-5
 
 
-##Requirements
+## Requirements
 python3
 PyTorch
 torchvision 
@@ -9,11 +9,11 @@ numpy
 
 
 
-##DataSet
+## DataSet
 MNIST dataset
 
 
-##Training
+## Training
 
 python main.py -t train
 
@@ -24,8 +24,8 @@ python main.py -t train -e ___
 python main.py -t test -p ___
 
 
-#Evaluating
+# Evaluating
 
 
-#References
+# References
 [1] Y. LeCun, L. Bottou, Y. Bengio, and P. Haffner. "Gradient-based learning applied to document recognition." Proceedings of the IEEE, 86(11):2278-2324, November 1998.
