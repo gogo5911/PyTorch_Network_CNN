@@ -11,7 +11,7 @@
 
 
 >ImageNet Classification with Deep Convolutional Neural Networks (AlexNet)  
-[[Paper](https://papers.nips.cc/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf)] [[Posting](https://ctkim.tistory.com/120)] [Pytorch]
+[[Paper](https://papers.nips.cc/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf)] [[Posting](https://ctkim.tistory.com/120)] [[Pytorch](https://github.com/gogo5911/PyTorch_Network/tree/main/2.AlexNet)]
 
 >Very Deep Convolutional Networks for Large-Scale Image Recognition (VGG)  
 [paper] [Posting] [Pytorch]
