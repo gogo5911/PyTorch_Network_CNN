@@ -14,7 +14,7 @@
 [[Paper](https://papers.nips.cc/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf)] [[Posting](https://ctkim.tistory.com/120)] [[Pytorch](https://github.com/gogo5911/PyTorch_Network/tree/main/2.AlexNet)]
 
 >Very Deep Convolutional Networks for Large-Scale Image Recognition (VGG)  
-[paper] [Posting] [Pytorch]
+[[paper](https://arxiv.org/pdf/1409.1556.pdf%20http://arxiv.org/abs/1409.1556.pdf)] [[Posting](https://ctkim.tistory.com/114)] [Pytorch]
 
 >Going Deeper with Convolutions (GoogleNet)  
 [paper] [Posting] [Pytorch]
