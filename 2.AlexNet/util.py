@@ -15,7 +15,7 @@ def get_accuracy(model, data_loader, device):
         for imgs, classes in data_loader:
 
             imgs, classes = imgs.to(device), classes.to(device)
-            output, _ = model(imgs)
+            output  = model(imgs)
 
 
             pred = output.max(1, keepdim=True)[1]

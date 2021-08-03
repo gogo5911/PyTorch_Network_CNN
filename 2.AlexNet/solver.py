@@ -9,7 +9,7 @@ def train(model, criterion, optimizer, train_loader, device):
         imgs, classes = imgs.to(device), classes.to(device)
 
         # 순전파
-        output, _ = model(imgs)
+        output  = model(imgs)
         loss = criterion(output, classes)
 
         running_loss += loss.item() * output.size(0)
@@ -37,7 +37,7 @@ def test(model, criterion, valid_loader, device):
         imgs, classes = imgs.to(device), classes.to(device)
 
         # 순전파
-        output, _ = model(imgs)
+        output  = model(imgs)
         loss = criterion(output, classes)
         running_loss += loss.item() * output.size(0)
 

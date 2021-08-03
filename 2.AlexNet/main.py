@@ -160,9 +160,9 @@ else :
         plt.imshow(test_dataset.data[index])
 
         with torch.no_grad():
-             model.eval()
-             tmpTest = test_dataset[index][0].to(DEVICE)
-             _, output = model(tmpTest.unsqueeze(0))
+            model.eval()
+            tmpTest = test_dataset[index][0].to(DEVICE)
+            _, output = model(tmpTest.unsqueeze(0))
 
         title = f'{CLASSES_NAME[torch.argmax(output)]} ({torch.max(output * 100):.0f}%)'
 
