@@ -7,7 +7,7 @@
 
 
 >Gradient-Based Learning Applied to Document Recognition (LeNet)  
-[[Paper](http://vision.stanford.edu/cs598_spring07/papers/Lecun98.pdf)] [[Posting](https://ctkim.tistory.com/119?category=880317)] [[Pytorch](https://github.com/gogo5911/PyTorch_Network/tree/main/LeNet)]
+[[Paper](http://vision.stanford.edu/cs598_spring07/papers/Lecun98.pdf)] [[Posting](https://ctkim.tistory.com/119?category=880317)] [[Pytorch](https://github.com/gogo5911/PyTorch_Network_CNN/tree/main/1.LeNet)]
 
 
 >ImageNet Classification with Deep Convolutional Neural Networks (AlexNet)  
@@ -17,7 +17,7 @@
 [[paper](https://arxiv.org/pdf/1409.1556.pdf%20http://arxiv.org/abs/1409.1556.pdf)] [[Posting](https://ctkim.tistory.com/114)] [Pytorch]
 
 >Going Deeper with Convolutions (GoogleNet)  
-[[paper](https://static.googleusercontent.com/media/research.google.com/ko//pubs/archive/43022.pdf)] [[Posting](https://ctkim.tistory.com/121)] [Pytorch]
+[[paper](https://static.googleusercontent.com/media/research.google.com/ko//pubs/archive/43022.pdf)] [[Posting](https://ctkim.tistory.com/121)] [[Pytorch](https://github.com/gogo5911/PyTorch_Network_CNN/tree/main/3.VGG)]
 
 >Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition (Sppnet)  
 [paper] [Posting] [Pytorch]
