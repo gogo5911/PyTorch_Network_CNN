@@ -1,4 +1,4 @@
-# LeNet-5
+# AlexNet
 
 
 ## Requirements
@@ -9,7 +9,7 @@
 
 
 ## DataSet
-* [MNIST dataset](http://yann.lecun.com/exdb/mnist/)
+* [CIFAR10 dataset](https://www.cs.toronto.edu/~kriz/cifar.html)
 
 
 ## Training & Evaluating
@@ -40,4 +40,4 @@ python main.py -t test -p ./checkpoint/epoch0.pth
 
 
 # References
-[[1](http://yann.lecun.com/exdb/publis/pdf/lecun-98.pdf)] Y. LeCun, L. Bottou, Y. Bengio, and P. Haffner. "Gradient-based learning applied to document recognition." Proceedings of the IEEE, 86(11):2278-2324, November 1998.
+[[1](https://papers.nips.cc/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf)] Krizhevsky, Alex; Sutskever, Ilya; Hinton, Geoffrey E. "ImageNet classification with deep convolutional neural networks". Communications of the ACM. 60 (6): 84–90. doi:10.1145/3065386. ISSN 0001-0782. 
