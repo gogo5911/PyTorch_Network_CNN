@@ -1,4 +1,4 @@
-# LeNet-5
+# VGG
 
 
 ## Requirements
@@ -9,7 +9,7 @@
 
 
 ## DataSet
-* [MNIST dataset](http://yann.lecun.com/exdb/mnist/)
+* [STL10 dataset](https://cs.stanford.edu/~acoates/stl10/)
 
 
 ## Training & Evaluating
@@ -40,4 +40,4 @@ python main.py -t test -p ./checkpoint/epoch0.pth
 
 
 # References
-[[1](http://yann.lecun.com/exdb/publis/pdf/lecun-98.pdf)] Y. LeCun, L. Bottou, Y. Bengio, and P. Haffner. "Gradient-based learning applied to document recognition." Proceedings of the IEEE, 86(11):2278-2324, November 1998.
+[[1](https://arxiv.org/pdf/1409.1556.pdf)] Karen Simonyan, Andrew Zisserman. "Very Deep Convolutional Networks for Large-Scale Image Recognition", 	arXiv:1409.1556
