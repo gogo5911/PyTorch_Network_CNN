@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import os
 os.environ['KMP_DUPLICATE_LIB_OK']='True'
 
+
 def get_accuracy(model, data_loader, device):
 
 
@@ -15,8 +16,7 @@ def get_accuracy(model, data_loader, device):
         for imgs, classes in data_loader:
 
             imgs, classes = imgs.to(device), classes.to(device)
-            output  = model(imgs)
-
+            output = model(imgs)
 
             pred = output.max(1, keepdim=True)[1]
             correct += pred.eq(classes.view_as(pred)).sum().item()
@@ -47,5 +47,3 @@ def plot_losses(train_losses, valid_losses):
 
     # plot style을 기본값으로 설정
     plt.style.use('default')
-
-

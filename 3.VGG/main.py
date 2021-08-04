@@ -1,16 +1,16 @@
-import os.path
-import numpy as np
-import matplotlib.pyplot as plt
 import torch
+import os.path
 import argparse
+import numpy as np
 import torch.nn as nn
-from torch.utils.data import DataLoader
-from torchvision import datasets, transforms
-from AlexNet import Net
-from solver import train, test
-from util import get_accuracy, plot_losses
-from datetime import datetime
+import matplotlib.pyplot as plt
 
+from VGG import VGG_A
+from datetime import datetime
+from solver import train, test
+from torch.utils.data import DataLoader
+from util import get_accuracy, plot_losses
+from torchvision import datasets, transforms
 
 
 #######################################################################################
@@ -28,6 +28,7 @@ def parse_args():
 
 
 
+
 #######################################################################################
 #Configurations
 
@@ -37,9 +38,9 @@ args = parse_args()
 resume_train = args.resume >= 0
 resume_after_epoch = args.resume
 
-BATCH_SIZE = 128
-CLASSES = 10
+BATCH_SIZE = 64
 LEARNING_RATE = 0.001
+CLASSES = 10
 EPOCHS = args.epoch
 TYPE = args.type
 
@@ -49,19 +50,25 @@ checkpoint_per_epochs = 1
 checkpoint_dir = r'./checkpoint'
 pth_path = args.path
 
-CLASSES_NAME = ('airplane', 'car', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck')
+CLASSES_NAME =  ('airplance', 'bird', 'car', 'cat', 'deer', 'dog', 'horse', 'monkey', 'ship', 'truck')
+
 
 #######################################################################################
 ##Data, transform, dataset and loader
 
 print('==> Preparing data ..')
 
-transform = transforms.Compose([transforms.Resize(256), transforms.RandomCrop(227), transforms.ToTensor(), transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
+transform = transforms.Compose([transforms.Resize(256),
+                                transforms.RandomCrop(224),
+                                transforms.ToTensor(),
+                                transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
 
-train_dataset = datasets.CIFAR10(root='CIFAR10_data', train= True, transform=transform, download= True)
+
+#VGGNet의 경우 ImageNet Dataset을 사용했다. 용량이 매우 크고 다운로드 받는데 시간이 걸려 STL10 Dataset으로 구현했다.
+train_dataset = datasets.STL10(root='STL10_data', split='train', transform=transform, download= True)
 train_loader = DataLoader(dataset=train_dataset, batch_size=BATCH_SIZE, shuffle=True)
 
-test_dataset = datasets.CIFAR10(root='CIFAR10_data', train=False, transform=transform)
+test_dataset = datasets.STL10(root='STL10_data', split='test', transform=transform, download= True)
 test_loader = DataLoader(dataset=test_dataset, batch_size=BATCH_SIZE, shuffle=False)
 
 
@@ -70,9 +77,11 @@ test_loader = DataLoader(dataset=test_dataset, batch_size=BATCH_SIZE, shuffle=Fa
 
 print('==> Constructing model ..')
 
-model = Net(CLASSES).to(DEVICE)
-optimizer = torch.optim.Adam(model.parameters(), lr=LEARNING_RATE) #Adam Otimizer 사용
-criterion = nn.CrossEntropyLoss() #loss Function은 CrossEntropy 사용
+
+model = VGG_A(CLASSES).to(DEVICE)
+optimizer = torch.optim.Adam(model.parameters(), lr=LEARNING_RATE)
+criterion = nn.CrossEntropyLoss().to(DEVICE)
+
 
 
 
@@ -100,6 +109,7 @@ if TYPE == 'train':
 
     #######################################################################################
     ## Train and Validate
+
 
     print('==> Training ..')
 
@@ -140,6 +150,7 @@ if TYPE == 'train':
     plot_losses(train_losses, test_losses)
 
 else :
+
     #######################################################################################
     ## Test
 
@@ -157,17 +168,21 @@ else :
     for index in range(1, ROW_IMG * N_ROWS + 1):
         plt.subplot(N_ROWS, ROW_IMG, index)
         plt.axis('off')
-        plt.imshow(test_dataset.data[index])
+
+        tmpData = np.asarray( test_dataset.data[index])
+        images = np.transpose(tmpData, (1, 2, 0))
+        plt.imshow(images)
 
         with torch.no_grad():
-             model.eval()
-             tmpTest = test_dataset[index][0].to(DEVICE)
-             _, output = model(tmpTest.unsqueeze(0))
+            model.eval()
+            tmpTest = test_dataset[index][0].to(DEVICE)
+            output = model(tmpTest.unsqueeze(0))
+
 
         title = f'{CLASSES_NAME[torch.argmax(output)]} ({torch.max(output * 100):.0f}%)'
 
         plt.title(title, fontsize=5)
     plt.show()
-    plt.suptitle('AlexNet')
+    plt.suptitle('VGG')
 
 
