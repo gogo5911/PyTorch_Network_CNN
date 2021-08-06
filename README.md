@@ -17,7 +17,7 @@
 [[paper](https://arxiv.org/pdf/1409.1556.pdf%20http://arxiv.org/abs/1409.1556.pdf)] [[Posting](https://ctkim.tistory.com/114)]  [[Pytorch](https://github.com/gogo5911/PyTorch_Network_CNN/tree/main/3.VGG)]
 
 >Going Deeper with Convolutions (GoogleNet)  
-[[paper](https://static.googleusercontent.com/media/research.google.com/ko//pubs/archive/43022.pdf)] [[Posting](https://ctkim.tistory.com/121)] [[Pytorch]()]
+[[paper](https://static.googleusercontent.com/media/research.google.com/ko//pubs/archive/43022.pdf)] [[Posting](https://ctkim.tistory.com/121)] [[Pytorch](https://github.com/gogo5911/PyTorch_Network_CNN/tree/main/4.GoogleNet)]
 
 >Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition (Sppnet)  
 [paper] [Posting] [Pytorch]
