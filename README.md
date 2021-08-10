@@ -20,7 +20,7 @@
 [[paper](https://static.googleusercontent.com/media/research.google.com/ko//pubs/archive/43022.pdf)] [[Posting](https://ctkim.tistory.com/121)] [[Pytorch](https://github.com/gogo5911/PyTorch_Network_CNN/tree/main/4.GoogleNet)]
 
 >Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition (Sppnet)  
-[paper] [Posting] [Pytorch]
+[[paper](https://arxiv.org/pdf/1406.4729.pdf)] [[Posting](https://ctkim.tistory.com/186)] [Pytorch]
 
 >Deep Residual Learning for Image Recognition (ResNet-50)  
 [paper] [Posting] [Pytorch]
