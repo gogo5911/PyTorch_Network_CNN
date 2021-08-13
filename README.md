@@ -23,7 +23,7 @@
 [[paper](https://arxiv.org/pdf/1406.4729.pdf)] [[Posting](https://ctkim.tistory.com/186)] [Pytorch]
 
 >Deep Residual Learning for Image Recognition (ResNet-50)  
-[paper] [Posting] [Pytorch]
+[[paper](https://arxiv.org/pdf/1512.03385.pdf)] [[Posting](https://ctkim.tistory.com/167)] [Pytorch]
 
 >Xception : Deep Learning with Depthwise Separable Convolutions (Xception)  
 [paper] [Posting] [Pytorch]
